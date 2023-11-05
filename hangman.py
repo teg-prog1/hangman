@@ -1,6 +1,8 @@
 import random
 # I den egna filen graphics ligger textgrafiken för den hängda gubben
 from graphics import hanging_man
+# I den egna filen lagnuage ligger en ordlista
+from language import wordlist
 
 def hide_letters(word, guesses):
     """Returnerar en sträng där alla bokstäver som inte gissats är dolda."""
@@ -20,14 +22,6 @@ def check_if_all_in(list_of_values, list_to_check_against):
             return False
     return True
     
-
-# Skapa en ordlista
-wordlist = [
-    "programmering", "tangentbord", "dator",
-    "studentmössa", "jultomte", "lektion",
-    "matsedel", "mopedbil", "körkort",
-    "gymnasium" ]
-
 # Slumpa fram ett ord
 word = random.choice(wordlist)
 
