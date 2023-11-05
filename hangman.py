@@ -13,6 +13,14 @@ def hide_letters(word, guesses):
             new_word += " _ "
     return new_word
 
+def check_if_all_in(list_of_values, list_to_check_against):
+    """Returnerar True om alla element i den första listan finns i den andra."""
+    for value in list_of_values:
+        if value not in list_to_check_against:
+            return False
+    return True
+    
+
 # Skapa en ordlista
 wordlist = [
     "programmering", "tangentbord", "dator",
@@ -62,15 +70,8 @@ while True:
         print("Bra jobbat! Bokstaven ingår i ordet.")
 
         # Kontrollera om alla bokstäver i ordet har gissats
-        has_won = True
-        for word_letter in word:
-            # Varje bokstav måste kollas, om nån inte gissats är vi inte klara
-            if word_letter not in guessed_correct:
-                has_won = False
-                break
-
-        # Skriv ut ett grattismeddelande vid vinst
-        if has_won:
+        if check_if_all_in(word, guessed_correct):
+            # Skriv ut ett grattismeddelande vid vinst
             print("Snyggt jobbat! Du klarade att gissa ordet!")
             # Avsluta programmet
             break

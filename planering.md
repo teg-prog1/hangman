@@ -19,5 +19,5 @@
    1. ~~Mellanrum mellan bokstäverna~~
    2. ~~Tomrader här och där~~
    3. ~~Felaktiga gissningar inte som en lista~~
-3. Fixa en funktion av kollen för vinst
+3. ~~Fixa en funktion av kollen för vinst~~
 
