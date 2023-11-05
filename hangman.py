@@ -19,9 +19,25 @@ while True:
     # Kontrollera först så att det inte är en gammal gissning
     if letter in guessed_correct or letter in guessed_wrong:
         print("Den bokstaven har du redan gissat på.")
+
     elif letter in word:
         guessed_correct.append(letter)
         print("Bra jobbat! Bokstaven ingår i ordet.")
+
+        # Kontrollera om alla bokstäver i ordet har gissats
+        has_won = True
+        for word_letter in word:
+            # Varje bokstav måste kollas, om nån inte gissats är vi inte klara
+            if word_letter not in guessed_correct:
+                has_won = False
+                break
+
+        # Skriv ut ett grattismeddelande vid vinst
+        if has_won:
+            print("Snyggt jobbat! Du klarade att gissa ordet!")
+            # Avsluta programmet
+            break
+
     else:
         guessed_wrong.append(letter)
         print("Tyvärr! Den bokstaven ingår inte i ordet.")
