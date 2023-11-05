@@ -12,3 +12,12 @@
 8. ~~Slumpa ord~~
 9. ~~Rita gubbe~~
 
+### Fas 2
+
+1. Flytta gubben till en egen fil (svårläst)
+2. Gör användarinterfacet snyggare
+   1. Mellanrum mellan bokstäverna
+   2. Tomrader här och där
+   3. Felaktiga gissningar inte som en lista
+3. Fixa en funktion av kollen för vinst
+
