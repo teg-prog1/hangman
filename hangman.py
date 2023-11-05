@@ -175,9 +175,9 @@ while True:
         # dvs gubben är hängd
         # Eftersom hanging_man har ett element som motsvarar
         # inga gissningar måste vi lägga till ett
-        if len(guessed_wrong)==len(hanging_man)+1:
+        if len(guessed_wrong)+1==len(hanging_man):
             print("Tyvärr! Du klarade det inte. Du blev hängd!")
-            print(hanging_man[len(guessed_wrong)-1])
+            print(hanging_man[len(guessed_wrong)])
             # Avsluta programmet
             break
     
