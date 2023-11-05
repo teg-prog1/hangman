@@ -14,7 +14,7 @@
 
 ### Fas 2
 
-1. Flytta gubben till en egen fil (svårläst)
+1. ~~Flytta gubben till en egen fil (svårläst)~~
 2. Gör användarinterfacet snyggare
    1. Mellanrum mellan bokstäverna
    2. Tomrader här och där

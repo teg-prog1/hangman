@@ -1,4 +1,6 @@
 import random
+# I den egna filen graphics ligger textgrafiken för den hängda gubben
+from graphics import hanging_man
 
 def hide_letters(word, guesses):
     """Returnerar en sträng där alla bokstäver som inte gissats är dolda."""
@@ -10,102 +12,6 @@ def hide_letters(word, guesses):
         else:
             new_word += "_"
     return new_word
-
-hanging_man = [
-    """
-    """,
-    """
-    /-+-\\
-    """,
-    """
-      +
-      |
-      |
-      |
-      |
-    /-+-\\
-    """,
-    """
-      +----+
-      |
-      |
-      |
-      |
-    /-+-\\
-    """,
-    """
-      +----+
-      |/
-      |
-      |
-      |
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |
-      |
-      |
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |
-      |
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |    |
-      |    
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |    |
-      |    
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |   /|
-      |    
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |   /|\\
-      |    
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |   /|\\
-      |   /
-    /-+-\\
-    """,
-    """
-      +----+
-      |/   |
-      |    O
-      |   /|\\
-      |   / \\
-    /-+-\\
-    """
-]
 
 # Skapa en ordlista
 wordlist = [
