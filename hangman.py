@@ -1,3 +1,5 @@
+import random
+
 def hide_letters(word, guesses):
     """Returnerar en sträng där alla bokstäver som inte gissats är dolda."""
     new_word = ""
@@ -9,8 +11,15 @@ def hide_letters(word, guesses):
             new_word += "_"
     return new_word
 
-# Skapa ett exempelord
-word = "programmering"
+# Skapa en ordlista
+wordlist = [
+    "programmering", "tangentbord", "dator",
+    "studentmössa", "jultomte", "lektion",
+    "matsedel", "mopedbil", "körkort",
+    "gymnasium" ]
+
+# Slumpa fram ett ord
+word = random.choice(wordlist)
 
 # Skapa listor för redan gissade bokstäver
 guessed_correct = []
