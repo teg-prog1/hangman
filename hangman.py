@@ -116,6 +116,10 @@ print("Välkommen till spelet Hänga Gubbe")
 
 # Fortsätt tills vi bryter på annat sätt
 while True:
+    # Rita den hängande gubben
+    print()
+    print(hanging_man[len(guessed_wrong)])
+    print()
     # Skriv ut ordet med okända bokstäver dolda
     print(hide_letters(word, guessed_correct))
     # Skriv ut felaktiga gissningar
@@ -158,9 +162,11 @@ while True:
 
         # Kontrollera om max antalet gissningar har överskridits
         # dvs gubben är hängd
-        if len(guessed_wrong)>max_guesses:
+        # Eftersom hanging_man har ett element som motsvarar
+        # inga gissningar måste vi lägga till ett
+        if len(guessed_wrong)==len(hanging_man)+1:
             print("Tyvärr! Du klarade det inte. Du blev hängd!")
+            print(hanging_man[len(guessed_wrong)-1])
             # Avsluta programmet
             break
     
-
