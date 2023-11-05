@@ -2,7 +2,7 @@
 
 ### Grovplanering
 
-1. Inmatning av en bokstav
+1. ~~Inmatning av en bokstav~~
 2. Kontrollera om korrekt bokstav
 3. Kontrollera om vinst
 4. Kontrollera om förlust
