@@ -1,3 +1,14 @@
+def hide_letters(word, guesses):
+    """Returnerar en sträng där alla bokstäver som inte gissats är dolda."""
+    new_word = ""
+    # Bygg upp ordet bokstav för bokstav
+    for letter in word:
+        if letter in guesses:
+            new_word += letter.upper()
+        else:
+            new_word += "_"
+    return new_word
+
 # Skapa ett exempelord
 word = "programmering"
 
@@ -11,9 +22,10 @@ print("Välkommen till spelet Hänga Gubbe")
 
 # Fortsätt tills vi bryter på annat sätt
 while True:
-    # Skriv ut antalet gissningar hittills
-    print(f"De här bokstäverna ingår i ordet: {guessed_correct}")
-    print(f"Hittills har du gissat fel på följande bokstäver: {guessed_wrong}.")
+    # Skriv ut ordet med okända bokstäver dolda
+    print(hide_letters(word, guessed_correct))
+    # Skriv ut felaktiga gissningar
+    print(f"Felaktiga gissningar: {guessed_wrong}.")
 
     while True:
         # Be användaren om en bokstav
