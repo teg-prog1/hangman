@@ -10,5 +10,5 @@
 6. ~~Skriv ut ordet med luckor~~
 7. ~~Skapa ordlista~~
 8. ~~Slumpa ord~~
-9. Rita gubbe
+9. ~~Rita gubbe~~
 
