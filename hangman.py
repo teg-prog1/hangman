@@ -6,8 +6,15 @@ guessed_correct = []
 guessed_wrong = []
 max_guesses = 10
 
+# Skriv ut ett välkomstmeddelande
+print("Välkommen till spelet Hänga Gubbe")
+
 # Fortsätt tills vi bryter på annat sätt
 while True:
+    # Skriv ut antalet gissningar hittills
+    print(f"De här bokstäverna ingår i ordet: {guessed_correct}")
+    print(f"Hittills har du gissat fel på följande bokstäver: {guessed_wrong}.")
+
     while True:
         # Be användaren om en bokstav
         letter = input("Gissa på en bokstav: ").lower()
