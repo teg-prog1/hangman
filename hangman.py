@@ -8,9 +8,9 @@ def hide_letters(word, guesses):
     # Bygg upp ordet bokstav för bokstav
     for letter in word:
         if letter in guesses:
-            new_word += letter.upper()
+            new_word += " " + letter.upper() + " "
         else:
-            new_word += "_"
+            new_word += " _ "
     return new_word
 
 # Skapa en ordlista
@@ -34,13 +34,15 @@ print("Välkommen till spelet Hänga Gubbe")
 # Fortsätt tills vi bryter på annat sätt
 while True:
     # Rita den hängande gubben
-    print()
     print(hanging_man[len(guessed_wrong)])
-    print()
     # Skriv ut ordet med okända bokstäver dolda
-    print(hide_letters(word, guessed_correct))
+    print(f"      {hide_letters(word, guessed_correct)}")
+    print()
     # Skriv ut felaktiga gissningar
-    print(f"Felaktiga gissningar: {guessed_wrong}.")
+    if len(guessed_wrong)>0:
+        # join lägger ihop alla element i en lista till en sträng
+        print(f" Fel: {' '.join(guessed_wrong).upper()}")
+        print()
 
     while True:
         # Be användaren om en bokstav
