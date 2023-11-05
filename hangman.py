@@ -4,6 +4,7 @@ word = "programmering"
 # Skapa listor för redan gissade bokstäver
 guessed_correct = []
 guessed_wrong = []
+max_guesses = 10
 
 # Fortsätt tills vi bryter på annat sätt
 while True:
@@ -41,5 +42,12 @@ while True:
     else:
         guessed_wrong.append(letter)
         print("Tyvärr! Den bokstaven ingår inte i ordet.")
+
+        # Kontrollera om max antalet gissningar har överskridits
+        # dvs gubben är hängd
+        if len(guessed_wrong)>max_guesses:
+            print("Tyvärr! Du klarade det inte. Du blev hängd!")
+            # Avsluta programmet
+            break
     
 
